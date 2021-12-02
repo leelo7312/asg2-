@@ -1,7 +1,7 @@
 #pragma once
 
 
-
+using namespace std;
 
 class Student
 {
@@ -63,7 +63,7 @@ public:
 
 	void setAvereage(double averageIn)
 	{
-		this->grade = averageIn;
+		grade = averageIn;
 	}
 
 	void setTest(int testIn)
@@ -101,9 +101,8 @@ private:
 
 public:
 
-	studentlist(string& name) : studentList(4)
+	studentlist(string& name) : name(name)
 	{
-		this->name = name;
 	}
 
 	void loadStudent()
@@ -163,7 +162,7 @@ public:
 
 	void outputCompanyInformation()
 	{
-		sort(studentList.begin(), studentList.end());
+		sort(studentList.begin(), studentList.end()); //might need to reverse
 
 		cout << endl << "Student: " << name << endl;
 		cout << "Name\t" << "test" << right << setw(15) << "Grade" << endl;
